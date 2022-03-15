@@ -56,10 +56,13 @@ pre-commit install
 git add *
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin git@github.com:zohassadar/base-project-example.git
+git remote add origin git@github.com-base-project-example:zohassadar/base-project-example.git
 git push -u origin main
 
 
 
 #Add pubkey to github
-cat ~/.ssh/id_rsa_github.pub 
+REPONAME='base-project-example'
+ssh-keygen -f ~/.ssh/id_rsa_github_$REPONAME
+cat ~/.ssh/id_rsa_github_$REPONAME.pub 
+echo -e "Host github.com-$REPONAME\n  Hostname github.com\n  IdentityFile /home/rwd/.ssh/id_rsa_github_$REPONAME\n" >> ~/.ssh/config
