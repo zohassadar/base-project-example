@@ -61,3 +61,5 @@ git push -u origin main
 
 
 
+#Add pubkey to github
+cat ~/.ssh/id_rsa_github.pub 
