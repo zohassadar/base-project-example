@@ -10,7 +10,6 @@
 *.ini
 !tox.ini
 
-
 *.cfg
 !setup.cfg
 
@@ -19,6 +18,7 @@
 
 *.yaml
 !netdisc_category/categories.yaml
+!.github/workflows/tests.yaml
 
 *.txt*
 !requirements*.txt
@@ -30,7 +30,7 @@
 .*
 !.gitignore
 !.pre-commit-config.yaml
-
+!.github
 
 _*.py
 !__*.py
